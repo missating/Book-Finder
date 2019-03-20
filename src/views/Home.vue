@@ -1,13 +1,13 @@
 <template>
-  <HelloWorld />
+  <InputBox />
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld';
+import InputBox from '../components/InputBox';
 
 export default {
   components: {
-    HelloWorld,
+    InputBox,
   },
 };
 </script>
