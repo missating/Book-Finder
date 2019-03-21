@@ -1,28 +1,53 @@
 <template>
-  <v-container grid-list-xl>
-    <v-layout wrap>
-      <v-flex xs4 mb-2>
-        <v-card>
-          <v-img :src="book.volumeInfo.imageLinks.smallThumbnail" aspect-ratio="1"></v-img>
+  <v-container>
+    <v-card>
+      <v-img :src="book.volumeInfo.imageLinks.thumbnail" aspect-ratio="1"></v-img>
 
-          <v-card-title primary-title>
-            <div>
-              <h2>{{book.volumeInfo.title}}</h2>
-            </div>
-          </v-card-title>
+      <v-list>
+        <v-list-tile>
+          <v-list-tile-content>
+            <v-list-tile-title>{{book.volumeInfo.title}}</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
 
-          <!-- <v-card-actions class="justify-center">
-            <v-btn flat color="green" @click="singleMovie(item.imdbID)">View</v-btn>
-          </v-card-actions>-->
-        </v-card>
-      </v-flex>
-    </v-layout>
+        <v-list-tile>
+          <v-list-tile-content>
+            <v-list-tile-title>Authors:</v-list-tile-title>
+            <v-list-tile-sub-title
+              v-for="(author, index) in book.volumeInfo.authors"
+              :key="index"
+            >{{author}}</v-list-tile-sub-title>
+          </v-list-tile-content>
+        </v-list-tile>
+
+        <v-list-tile>
+          <v-list-tile-content>
+            <v-list-tile-title>Published Date:</v-list-tile-title>
+            <v-list-tile-sub-title>{{book.volumeInfo.publishedDate}}</v-list-tile-sub-title>
+          </v-list-tile-content>
+        </v-list-tile>
+
+        <v-list-tile>
+          <v-list-tile-action>
+            <v-btn flat color="black" @click="readMore">Read More</v-btn>
+          </v-list-tile-action>
+        </v-list-tile>
+      </v-list>
+    </v-card>
   </v-container>
 </template>
 
 <script>
 export default {
-  name: "BookCard",
-  props: ["book"]
+  name: 'BookCard',
+  props: ['book'],
+  data() {
+    return {};
+  },
+  methods: {
+    readMore() {
+      window.open(this.book.volumeInfo.infoLink);
+    },
+  },
 };
 </script>

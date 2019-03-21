@@ -1,27 +1,26 @@
 <template>
   <v-container>
-    <h3 v-if="!books.length && !currentlySearching">No books Found</h3>
-    <div v-else>
-      <div v-for="(book, index) in books" :key="index">
-        <book-card v-if="book" :book="book"></book-card>
-      </div>
-    </div>
+    <h3 v-if="!books.length && searchTerm && !isFetching">No books Found</h3>
+    <v-container v-else grid-list-xl>
+      <v-layout wrap>
+        <v-flex xs6 v-for="(book, index) in books" :key="index">
+          <book-card v-if="book" :book="book"></book-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
   </v-container>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import BookCard from '@/components/BookCard.vue'
+import BookCard from '@/components/BookCard.vue';
 
 export default {
-  name: "Books",
+  name: 'Books',
   components: {
-    BookCard
+    BookCard,
   },
   data() {
-    return {
-      
-    }
+    return {};
   },
   computed: {
     books() {
@@ -30,10 +29,9 @@ export default {
     searchTerm() {
       return this.$store.state.searchTerm;
     },
-    currentlySearching() {
-      return this.$store.state.currentlySearching;
-    }
-  }
+    isFetching() {
+      return this.$store.state.fetching;
+    },
+  },
 };
 </script>
-

@@ -7,16 +7,22 @@
     </v-toolbar>
 
     <v-content>
+      <input-box></input-box>
       <router-view></router-view>
     </v-content>
   </v-app>
 </template>
 
 <script>
+import InputBox from '@/components/InputBox.vue';
+
 export default {
-  name: "App",
+  name: 'App',
+  components: {
+    InputBox,
+  },
   data() {
     return {};
-  }
+  },
 };
 </script>

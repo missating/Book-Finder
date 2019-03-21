@@ -8,7 +8,7 @@ export default new Vuex.Store({
   state: {
     books: [],
     searchQuery: '',
-    currentlySearching: false,
+    isFetching: false,
     apiBaseUrl: 'https://www.googleapis.com/books/v1/volumes',
   },
   mutations: {
@@ -21,11 +21,11 @@ export default new Vuex.Store({
     },
 
     startSearch(state) {
-      state.currentlySearching = true; // eslint-disable-line
+      state.isFetching = true; // eslint-disable-line
     },
 
     endSearch(state) {
-      state.currentlySearching = false; // eslint-disable-line
+      state.isFetching = false; // eslint-disable-line
     },
   },
   actions: {
