@@ -5,6 +5,7 @@
         label="Search For Books by: Title, Author etc"
         class="input-box"
         v-model="searchQuery"
+        v-on:keyup.enter="submit"
       ></v-text-field>
       <v-btn @click="submit" flat :disabled="!searchQuery">
         <span class="mr-2">Search</span>

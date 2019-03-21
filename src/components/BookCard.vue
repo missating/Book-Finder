@@ -29,7 +29,7 @@
 
         <v-list-tile>
           <v-list-tile-action>
-            <v-btn flat color="black" @click="readMore">Read More</v-btn>
+            <v-btn flat color="black" @click="readMore">Book Info</v-btn>
           </v-list-tile-action>
         </v-list-tile>
       </v-list>
