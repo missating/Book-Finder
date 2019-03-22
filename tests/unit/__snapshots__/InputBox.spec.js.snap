@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputBox.vue should render correctly 1`] = `
+<div
+  class="container"
+>
+  <form
+    class="v-form"
+    novalidate="novalidate"
+  >
+    <div
+      class="container align-center justify-center"
+    >
+      <div
+        class="layout"
+      >
+        <div
+          class="flex xs12"
+        >
+          <div
+            class="v-input v-text-field theme--light"
+          >
+            <div
+              class="v-input__control"
+            >
+              <div
+                class="v-input__slot"
+              >
+                <div
+                  class="v-text-field__slot"
+                >
+                  <label
+                    class="v-label theme--light"
+                    for="input-box"
+                    style="left: 0px; position: absolute;"
+                  >
+                    Search For Books by: Title, Author etc
+                  </label>
+                  <input
+                    id="input-box"
+                    required="required"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div
+                class="v-text-field__details"
+              >
+                <div
+                  class="v-messages theme--light"
+                >
+                  <div
+                    class="v-messages__wrapper"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+         
+        <div
+          class="flex xs12 md4"
+        >
+          <button
+            class="v-btn theme--light"
+            raised=""
+            type="button"
+          >
+            <div
+              class="v-btn__content"
+            >
+              <span>
+                Search
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+   
+  <!---->
+   
+  <!---->
+</div>
+`;

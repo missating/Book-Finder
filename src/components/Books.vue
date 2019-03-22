@@ -1,7 +1,6 @@
 <template>
   <v-container>
-    <h3 v-if="!books.length && searchTerm && !isFetching">No books Found</h3>
-    <v-container v-else grid-list-xl>
+    <v-container grid-list-xl>
       <v-layout wrap>
         <v-flex xs6 v-for="(book, index) in books" :key="index">
           <book-card v-if="book" :book="book"></book-card>
@@ -12,12 +11,12 @@
 </template>
 
 <script>
-import BookCard from '@/components/BookCard.vue';
+import BookCard from "@/components/BookCard.vue";
 
 export default {
-  name: 'Books',
+  name: "Books",
   components: {
-    BookCard,
+    BookCard
   },
   data() {
     return {};
@@ -26,12 +25,6 @@ export default {
     books() {
       return this.$store.getters.getBooks;
     },
-    searchTerm() {
-      return this.$store.state.searchTerm;
-    },
-    isFetching() {
-      return this.$store.state.fetching;
-    },
-  },
+  }
 };
 </script>

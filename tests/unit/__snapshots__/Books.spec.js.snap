@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Books.vue should render correctly 1`] = `
+<v-container-stub
+  tag="div"
+>
+  <v-container-stub
+    grid-list-xl=""
+    tag="div"
+  >
+    <v-layout-stub
+      tag="div"
+      wrap=""
+    />
+  </v-container-stub>
+</v-container-stub>
+`;

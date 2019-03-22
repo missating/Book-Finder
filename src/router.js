@@ -14,11 +14,5 @@ export default new Router({
       name: 'books',
       component: Books,
     },
-    // {
-    //   path: '/books/:name',
-    //   name: 'books',
-    //   props: true,
-    //   component: Books,
-    // },
   ],
 });

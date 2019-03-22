@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookCard.vue should render correctly 1`] = `
+<div
+  class="container"
+>
+  <div
+    class="v-card v-sheet theme--light"
+  >
+    <div
+      class="v-responsive v-image"
+    >
+      <div
+        class="v-responsive__sizer"
+        style="padding-bottom: 100%;"
+      />
+      <div
+        class="v-image__image v-image__image--preload v-image__image--cover"
+        mode="in-out"
+        name="fade-transition"
+        style="background-position: center center;"
+      />
+      <div
+        class="v-responsive__content"
+      />
+    </div>
+     
+    <div
+      class="v-list theme--light"
+      role="list"
+    >
+      <div
+        role="listitem"
+      >
+        <div
+          class="v-list__tile theme--light"
+        >
+          <div
+            class="v-list__tile__content"
+          >
+            <div
+              class="v-list__tile__title"
+            >
+              Amaze
+            </div>
+          </div>
+        </div>
+      </div>
+       
+      <div
+        role="listitem"
+      >
+        <div
+          class="v-list__tile theme--light"
+        >
+          <div
+            class="v-list__tile__content"
+          >
+            <div
+              class="v-list__tile__title"
+            >
+              Authors:
+            </div>
+             
+            <div
+              class="v-list__tile__sub-title"
+            >
+              Marie Jeanne de Rooij
+            </div>
+          </div>
+        </div>
+      </div>
+       
+      <div
+        role="listitem"
+      >
+        <div
+          class="v-list__tile theme--light"
+        >
+          <div
+            class="v-list__tile__content"
+          >
+            <div
+              class="v-list__tile__title"
+            >
+              Published Date:
+            </div>
+             
+            <div
+              class="v-list__tile__sub-title"
+            >
+              2006
+            </div>
+          </div>
+        </div>
+      </div>
+       
+      <div
+        role="listitem"
+      >
+        <div
+          class="v-list__tile theme--light"
+        >
+          <div
+            class="v-list__tile__action"
+          >
+            <button
+              class="v-btn v-btn--flat theme--light black--text"
+              type="button"
+            >
+              <div
+                class="v-btn__content"
+              >
+                Book Info
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
