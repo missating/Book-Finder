@@ -8,6 +8,7 @@
               label="Search For Books by: Title, Author etc"
               id="input-box"
               v-model="searchQuery"
+              v-on:keyup="validate"
               :rules="searchQueryRules"
               required
             ></v-text-field>
@@ -22,7 +23,12 @@
     </v-form>
     <v-container v-if="isFetching">
       <div class="text-xs-center">
-        <v-progress-circular indeterminate :size="150" :width="8" color="black"></v-progress-circular>
+      <v-progress-circular
+        indeterminate
+        :size="150"
+        :width="8"
+        color="black">
+      </v-progress-circular>
       </div>
     </v-container>
     <v-container v-if="showSearchQuery && !isFetching">
@@ -40,7 +46,7 @@ export default {
       valid: true,
       searchQuery: '',
       searchQueryRules: [v => !!v || 'Title or Author of a book is required'],
-      showSearchQuery: false
+      showSearchQuery: false,
     };
   },
 
@@ -55,8 +61,8 @@ export default {
   computed: {
     isFetching() {
       return this.$store.state.isFetching;
-    }
-  }
+    },
+  },
 };
 </script>
 
