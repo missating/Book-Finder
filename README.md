@@ -1,5 +1,7 @@
 # book-finder
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3620cd2c-1357-4c34-b01c-d20654fa165b/deploy-status)](https://app.netlify.com/sites/xenodochial-goodall-33f94f/deploys)
+
 ## Project setup
 ```
 yarn install
